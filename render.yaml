@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: storybote
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 bot.py"
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: ELEVEN_API_KEY
+        sync: false
